@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style conference</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://png.icons8.com/ios/1600/video-conference.png">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        ul li a {
+            /*background: #a9a9a9*/
+            /*padding: 1px;*/
+            margin-right: 3px;
+            text-decoration: none;
+            /*border-radius: 3px;*/
+            font-weight: 300;
+            font-family: 'Roboto';
+            /*            font-size: 14px;*/
+        }
+
+
+        @import "https://fonts.googleapis.com/css?family=Open+Sans|Oswald";
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header-main {
+            background: #FCFCFC;
+        }
+
+
+        .container {
+            position: relative;
+        }
+
+        .navigation-primary>ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .navigation-primary>ul>li {
+            display: inline-block;
+        }
+
+        /*        megamenu nav bar*/
+
+        .navigation-primary>ul>li>a {
+            display: block;
+            color: #519cf8;
+            font-weight: 500;
+            padding: 15px 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .navigation-primary>ul>li:hover>.mega-menu,
+        .navigation-primary>ul>li:hover>.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mega-body p {
+            color: darkslategray;
+        }
+
+        .navigation-primary>ul>li:hover>a {
+            background: #519cf8;
+            color: #fff;
+        }
+
+        .navigation-primary>ul .mega-menu,
+        .navigation-primary>ul .sub-menu {
+            z-index: 9999;
+            padding: 0;
+            position: absolute;
+            background-color: #FFFFFF;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -4px 0px 10px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #519cf8;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(20%);
+        }
+
+        .navigation-primary>ul>li:last-child {
+            border: none;
+        }
+
+        .navigation-primary>ul .mega-menu>li a,
+        .navigation-primary>ul .sub-menu>li a {
+            display: block;
+            text-decoration: none;
+            font-size: 13px;
+            color: #858585;
+        }
+
+        .navigation-primary>ul .mega-menu>li>.sub-menu,
+        .navigation-primary>ul .sub-menu>li>.sub-menu {
+            /*            background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-018-cloudy-knoxville.png);*/
+            /*            background-size: cover;*/
+        }
+
+        .navigation-primary>ul .mega-menu {
+            left: 0;
+            width: 100%;
+            padding: 15px 30px;
+        }
+
+        .navigation-primary>ul .mega-menu li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navigation-primary>ul .mega-menu li a {
+            padding: 5px 20px;
+            font-size: 13px;
+        }
+
+        .navigation-primary>ul .mega-menu li ul {
+            padding: 0;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li {
+            display: block;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li a {
+            color: #858585;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li:hover a {
+            background: #519cf8;
+            color: white;
+        }
+
+        .navigation-primary>ul .mega-menu>li {
+            margin-right: 30px;
+        }
+
+        .navigation-primary>ul .mega-menu>li>a {
+
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navigation-primary>ul .sub-menu {
+            min-width: 200px;
+        }
+
+        .navigation-primary>ul .sub-menu li {
+            display: block;
+            position: relative;
+        }
+
+        .navigation-primary>ul .sub-menu li a {
+            padding: 10px 30px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navigation-primary>ul .sub-menu li .sub-menu {
+            border-top: none;
+            left: 100%;
+            top: 0;
+        }
+
+        .navigation-primary>ul .sub-menu li:hover>.mega-menu,
+        .navigation-primary>ul .sub-menu li:hover>.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .navigation-primary>ul .sub-menu li:hover>a {
+            content: "\f103";
+            background: #519cf8;
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 10% 0;
+        }
+
+        .hero h2 {
+            text-transform: uppercase;
+            font-size: 72px;
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+
+        .hero p {
+            color: #a3a3a3;
+        }
+
+        #main-wrapper {
+            /*            background-color: #333;*/
+            position: fixed;
+            top: -49px;
+            height: 49px;
+            width: 100%;
+            border-bottom: .5px solid #81B7FA;
+            /*            border-radius: 5px;*/
+            /*            border-radius: 5px;*/
+            transition: top 0.3s;
+            /*            box-shadow: 2px 5px 10px;*/
+            z-index: 1;
+            /*            color: aliceblue;*/
+            background-color: #fff;
+
+        }
+
+        .form {
+            padding: 10px;
+            color: #fff;
+        }
+
+        .form label,
+        .form input,
+        textarea {
+            display: block;
+            /*            text-transform: uppercase;*/
+            font-size: 12px;
+            font-family: "Oswald", sans-serif;
+            border-radius: 5px;
+            color: #858585;
+            /*            color: #fff;*/
+        }
+
+        .mega-menu-inner>div {
+            /*            font-size: 12px;*/
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+
+        .mega-menu-body {
+            display: block;
+            color: #858585;
+            padding: 15px 15px;
+            font-size: 12px;
+        }
+
+        .mega-body {
+            width: 20%;
+            height: 40%;
+            padding: 10px;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .mega-body img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .arrow {
+            border: 1px solid #519CF8;
+            opacity: .7;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            margin-left: 5px;
+            margin-bottom: 2px;
+            padding: 2.2px;
+            transform: rotate(45deg);
+            transition: .2s;
+        }
+
+        .navigation-primary>ul>li>a:hover>.arrow {
+            border: 1px solid #333;
+            border-width: 2px 0 0 2px;
+
+        }
+
+        .nav-item a:hover>.arrow {
+            border: 1px solid #333;
+            border-width: 4px 0 0 4px;
+            margin-bottom: 0px;
+            margin-left: -20px;
+
+        }
+
+        .nav-mega {
+            /*            margin: -400px;*/
+            /*            left: 1px;*/
+            /*                        margin-top: 1px;*/
+            /*            width: 40%;*/
+            /*            margin-left: 25px;*/
+            padding: 15px;
+            z-index: 9999;
+            position: absolute;
+            background-color: #f4f4f4;
+            /*            background-image: url(img/assets/gradient.jpg);*/
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px 5px 10px rgba(0, 0, 0, 0.1);
+            border-top: 2px solid #519cf8;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(20%);
+            color: #84B9FA;
+        }
+
+        .nv:hover>.nav-mega {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .menu a {
+            display: block;
+            padding: .2rem;
+            margin: 1px;
+            /*            color: #000;*/
+            font-size: .875rem;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            color: #51b5d6;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .menu h4 {
+            margin: .5rem 0 .75rem;
+            padding-bottom: .5rem;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.25rem;
+            font-weight: normal;
+            color: dimgrey;
+        }
+
+        .menu h5 {
+            margin: 0;
+            margin-bottom: .5rem;
+            font-size: .875rem;
+            color: cadetblue;
+        }
+
+        .menu {
+            display: inline-block;
+            border-radius: .2rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            /*            background-image: url(img/assets/gradient.jpg);*/
+        }
+
+
+
+
+        .menu:hover>li {
+            cursor: pointer;
+            display: block;
+        }
+
+
+        .menu li h3 {
+            width: 12rem;
+            margin: 0px;
+            padding: .65rem .75rem;
+            border: 1px solid transparent;
+            border-width: 1px 0;
+            background: #f4f4f4;
+            position: relative;
+            z-index: 10;
+            font-size: .875rem;
+            font-weight: 300;
+            cursor: default;
+
+        }
+
+        .menu li:hover h3 {
+            width: 13.013rem;
+            border-radius: 5px 60px 60px 5px;
+            border-color: #84B9FA;
+        }
+
+        .menu li:hover .menu li {
+            color: antiquewhite;
+        }
+
+        .menu li:hover div {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0%);
+
+            /*            text-align: center;*/
+        }
+
+
+        .menu li div {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(60%);
+            /*
+            visibility: hidden;
+            overflow: hidden;
+*/
+            margin-top: -16.6px;
+            transition: .3s ease-in-out;
+            width: 400px;
+            padding: 1rem 1.2rem;
+            background-image: url(img/assets/gradient.jpg);
+            border-left: 1px solid #84B9FA;
+            border-top: 2px solid #519cf8;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 12rem;
+            z-index: 1;
+            height: 365px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu li div {
+            padding-left: 40px;
+        }
+
+        #nvbr {
+            position: absolute;
+            left: 0px;
+        }
+
+
+        .menu h3:hover {
+            background-color: #84B9FA;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu li a {
+            /*            display: inline-block;*/
+            /*            background-color: #84B9FA;*/
+            color: dodgerblue;
+            /*            display: none;*/
+            text-decoration: none;
+            margin: 2px;
+            padding: 5px;
+        }
+
+        .menu li:hover>h3 {
+            background-color: #84B9FA;
+            color: #fff;
+        }
+
+        .menu div ul li a {
+            color: #4A96F3;
+            font-weight: 500;
+        }
+
+        /*        mega menu another*/
+
+        .cars {
+            /*            width: 19%;*/
+            /*            height: 100%;*/
+            background-color: #ccc;
+            /*            height: 100%;*/
+            /*            text-align: center;*/
+            /*            box-shadow: -2px -2px 10px;*/
+        }
+
+        .list {
+            margin: 0px;
+            padding: 10px 0px;
+        }
+
+        .list li {
+            display: inline-block;
+            list-style: none;
+            margin: 2px;
+            padding: 10px;
+            background: #fff;
+
+            /*            background: #d5001c;*/
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: #333;
+            opacity: .7;
+            font-weight: 750;
+        }
+
+        /*        Details of the cars      */
+
+        /*        car details     */
+
+        .pic {
+            /*            display: flex;*/
+            /*            justify-content: center;*/
+            width: 100%;
+            height: 100vh;
+        }
+
+        .view {
+            background-color: #fff;
+            width: 100%;
+            /*            height: 25vh;*/
+            display: flex;
+            justify-content: space-around;
+            opacity: .8;
+            align-items: center;
+            box-shadow: 0px -10px 10px -9px #ccc;
+        }
+
+        .view div {
+            border-right: 1px solid #ccc;
+            /*            border-left:  1px solid #ccc;*/
+            padding-right: 60px;
+        }
+
+        .view div:last-child {
+            border-right: none;
+        }
+
+        .pic1 {
+            background-image: url('https://files3.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-718-cayman/normal/9e78560c-99bd-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pic2 {
+            background-image: url('https://files3.porsche.com/filestore/image/multimedia/none/e-performance-missione-flyout-background/normal/0bf18c6a-1d44-11e8-bbc5-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pic3 {
+            background-image: url('https://files2.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-panamera/normal/648c1f8e-99bf-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pic4 {
+            background-image: url('https://files1.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-911carrera/normal/ba0ef143-99bd-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .pic {
+            position: relative;
+        }
+
+        .pic img {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: -7.5%;
+            right: 16%;
+            /*            bottom: 90px;*/
+            width: 50%;
+
+        }
+
+        .list li {
+            display: flex;
+            /*                        justify-content: center;*/
+            align-items: center;
+            text-align: left;
+            /*            height: 30px;*/
+            margin: 0px;
+            padding: 20px;
+            /*            margin-bottom: 3px;*/
+            border-bottom: 1px solid #ccc;
+            transition: .3s;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .megas {
+            margin: auto;
+            /*            padding: 6px;*/
+            width: 96vw;
+            height: 80vh;
+            position: relative;
+        }
+
+
+
+
+        .list li:hover {
+            background-color: #d5001c;
+        }
+
+        .list li:hover>a {
+            color: #fff;
+            opacity: 1;
+        }
+
+        .cars {
+            /*            position: relative;*/
+            width: 22%;
+            height: 99.6%;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+
+
+        .car {
+            border: 1px solid #e3e4e4;
+            /*            position: relative;*/
+            /*
+            display: flex;
+            flex-direction: column;
+*/
+            /*            margin: px;*/
+            width: 78%;
+            /*            height: 10%;*/
+            /*                        height: 100%;*/
+            position: absolute;
+            /*            margin-left: 120px;*/
+            /*            top: 0px;*/
+            bottom: 0px;
+            /*            left: 40px;*/
+            /*            right: 0px;*/
+            left: 22%;
+        }
+
+        #first_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #first:hover>#first_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #second_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #second:hover>#second_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #third_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #third:hover>#third_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #fourth_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            /*            transform: translateY(20%);*/
+        }
+
+
+
+        #fourth:hover>#fourth_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            /*            transform: translateY(0);*/
+        }
+
+        #main-wrapper {
+            position: relative;
+        }
+
+        .megas {
+            position: absolute;
+            z-index: 1;
+            left: 40px;
+        }
+
+        .car {
+            position: absolute;
+            top: 0px;
+            left: 288px;
+            /*            width: 120px;*/
+            /*            right: 0px;*/
+            width: 500px;
+            height: 200px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--Main Navigation-->
+    <header>
+        <div id="main-wrapper" class="header-main">
+            <div class="container">
+                <nav class="navigation-primary">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Mega Menu<i class="arrow down"></i></a>
+                            <ul class="mega-menu">
+                                <li><a href="">Museu Porsche</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Modelos</a></li>
+                                        <li><a href="">Veículos Seminovos</a></li>
+                                        <li><a href="">Eventos esportivos</a></li>
+                                        <li><a href="">Serviços & Acessórios</a></li>
+                                        <li><a href="">Empresa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">E-Performance</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Carros esportivos</a></li>
+                                        <li><a href="">A Porsche num relance</a></li>
+                                        <li><a href="">Newsroom & Imprensa</a></li>
+                                        <li><a href="">Empregos & Carreira</a></li>
+                                        <li><a href="">Christophorus Magazine</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">Anos de fascínio por </a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Sustentabilidade</a></li>
+                                        <li><a href="">Porsche Brasil</a></li>
+                                        <li><a href="">Serviços</a></li>
+                                        <li><a href="">Newsroom & Imprensa</a></li>
+                                        <li><a href="">Empregos & Carreira</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">O Princípio Porsche</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Modelos</a></li>
+                                        <li><a href="">Veículos Seminovos</a></li>
+                                        <li><a href="">Eventos esportivos</a></li>
+                                        <li><a href="">Serviços & Acessórios</a></li>
+                                        <li><a href="">Empresa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Porsche</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Eventos esportivos</a></li>
+                                        <li><a href="">Serviços & Acessórios</a></li>
+                                        <li><a href="">Modelos</a></li>
+                                        <li><a href="">Veículos Seminovos</a></li>
+                                        <li><a href="">Empresa</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Blog</a></li>
+                        <!--
+                        
+                        
+                        
+                        
+                        
+                        
+-->
+                        <li><a href="">Mega Menu 2 <i class="arrow down"></i></a>
+                            <div class="mega-menu mega-menu-body">
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/android/30965-6-android-file.png" alt="">
+                                    <h3>Android</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident assumenda cum error iusto veniam repellendus eligendi eum impedit voluptates vel.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/apple_logo/26986-5-apple-logo-hd.png" alt="">
+                                    <h3>Apple</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, consequuntur numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/twitter/2-2-twitter-png-file.png" alt="">
+                                    <h3>Twitter</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatibus pariatur sequi dolores asperiores, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/facebook/2-2-facebook-free-download-png.png" alt="">
+                                    <h3>Facebook</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/skype/6-2-skype-png-pic.png" alt="">
+                                    <h3>Skype</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <!--
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+-->
+                        <li><a href="">Sub Menu <i class="arrow down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Porsche num relance</a></li>
+                                <li><a href="">Newsroom & Imprensa</a></li>
+                                <li><a href="">Submenus    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  >></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">Porsche Brasil</a></li>
+                                        <li><a href="">Serviços</a></li>
+                                        <li><a href="">Empresa &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;>></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="">Modelos</a></li>
+                                                <li><a href="">Veículos Seminovos</a></li>
+                                                <li><a href="">Eventos esportivos</a></li>
+                                                <li><a href="">Serviços & Acessórios</a></li>
+                                                <li><a href="">Empresa</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="">Porsche Brasil</a></li>
+                                        <li><a href="">Serviços</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="">Serviços & Acessórios</a></li>
+                                <li><a href="">Empresa</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="">Contact Us<i class="arrow down"></i></a>
+                            <div class="sub-menu">
+                                <div class="form">
+                                    <div>
+                                        <label for="Name">Name:</label>
+                                        <input style="width: 100%; background-color:aliceblue" type="text" placeholder="Enter Name...">
+                                    </div><br>
+                                    <div>
+                                        <label for="Name">Message:</label>
+                                        <textarea style="background-color:aliceblue " name="" id="" cols="30" rows="5" value="Comment here..."></textarea>
+                                    </div><br>
+                                    <input style="cursor: pointer; width: 94%;" class="btn btn-mdb-color btn-sm" type="submit" value="Send">
+                                </div>
+                            </div>
+                        </li>
+                        <li style="float: right;"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <div class="sub-menu" style="border: none;">
+                                <input style="position: fixed; top:-44px; border-radius: 0px; right: 200px; margin:5px; background-color: aliceblue;" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+
+
+        <!-- Navbar -->
+        <div class="navbar navbar-expand-lg navbar-light white scrolling-navbar bg-gray m-0 p-0">
+            <div class="container" style="position: relative; width: 100%; margin: 0 auto;">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect pl-2" href="index.html">
+                    <strong class="font-weight-bold text-monospace blue-text mr-2 p-2 z-depth-2 wow fadeIn" style="font-family:monospace;">STYLE CONFERENCE</strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="index.html">Cars
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            <!--                            mega menu another-->
+                            <div class="megas">
+                                <div class="cars">
+                                    <ul class="list">
+                                        <li id="first"><a href="">712</a>
+                                            <div id="first_car" class="car">
+                                                <div class="pic pic1">
+                                                    <img src="https://files2.porsche.com/filestore/image/multimedia/none/jdp-2016-982-718-c7-modelimage-sideshot/model/d3b4f827-3356-11e8-bbc5-0019999cd470/porsche-model.png" alt="">
+                                                </div>
+                                                <div class="view">
+                                                    <div>
+                                                        <h3>From $ 56,900.00*</h3>
+                                                        <p>MSRP</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3>300 hp</h3>
+                                                        <p>Max. power</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3>4.9 s</h3>
+                                                        <p>0 - 60 mph</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="second"><a href="">911</a>
+                                            <div id="second_car" class="car">
+                                                <div class="pic pic2">
+                                                    <img src="https://files1.porsche.com/filestore/image/multimedia/none/e-performance-missione-modelimage-sideshot/model/90d63f92-1d44-11e8-bbc5-0019999cd470/porsche-model.png" alt="">
+                                                </div>
+                                                <div class="view">
+                                                    <div>
+                                                        <h3>&lt; 600 hp</h3>
+                                                        <p>Max. power</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3> &gt; 3.5s </h3>
+                                                        <p>0 - 60 mphr</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3>8.9 s</h3>
+                                                        <p>0 - 220 mph</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="third"><a href="">714</a>
+                                            <div id="third_car" class="car">
+                                                <div class="pic pic3">
+                                                    <img src="https://files1.porsche.com/filestore/image/multimedia/none/jdp-2016-970-g2-v6-modelimage-sideshot/model/b110a360-a6a7-11e6-be88-0019999cd470/porsche-model.png" alt="">
+                                                </div>
+                                                <div class="view">
+                                                    <div>
+                                                        <h3>&lt; 400 hp</h3>
+                                                        <p>Max. power</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3> &gt; 7.5s </h3>
+                                                        <p>0 - 80 mphr</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3>12.9 s</h3>
+                                                        <p>0 - 220 mph</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li id="fourth"><a href="">715</a>
+                                            <div id="fourth_car" class="car">
+                                                <div class="pic pic4">
+                                                    <img src="https://files3.porsche.com/filestore/image/multimedia/none/jdp-2016-991-2nd-c2-modelimage-sideshot/model/9eb1b6f4-946c-11e6-9f1b-0019999cd470/porsche-model.png" alt="">
+                                                </div>
+                                                <div class="view">
+                                                    <div>
+                                                        <h3>&lt; 450 hp</h3>
+                                                        <p>Max. power</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3> &gt; 7.5s </h3>
+                                                        <p>0 - 120 mphr</p>
+                                                    </div>
+                                                    <div>
+                                                        <h3>4.9 s</h3>
+                                                        <p>0 - 140 mph</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!--                       mega menu end-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="speakers.html">Speakers</a>
+                        </li>
+
+                        <li class="nav-item nv">
+                            <a class="nav-link waves-effect" href="speakers.html">Mega<i class="arrow down"></i></a>
+                            <div class="mega-menu-body nav-mega">
+                                <ul class="menu">
+                                    <li style="padding: 2px;">Choose a Category</li>
+                                    <li>
+                                        <h3>Books</h3>
+                                        <div>
+                                            <h4>Books</h4>
+                                            <h5>Language</h5>
+                                            <ul>
+                                                <li><a href="#">English</a></li>
+                                                <li><a href="#">Dutch</a></li>
+                                                <li><a href="#">German</a></li>
+                                                <li><a href="#">French</a></li>
+                                                <li><a href="#">Spanish</a></li>
+                                                <li><a href="#">Turkish</a></li>
+                                                <li><a href="#">Arabic</a></li>
+                                            </ul>
+
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <h3>Computer & Electronics</h3>
+                                        <div>
+                                            <h4>Smartphones</h4>
+                                            <ul>
+                                                <li><a href="">Carros esportivos</a></li>
+                                                <li><a href="">A Porsche num relance</a></li>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                                <li><a href="">Christophorus Magazine</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Toys</h3>
+                                        <div>
+                                            <h4>Brands</h4>
+                                            <ul>
+                                                <li><a href="">Sustentabilidade</a></li>
+                                                <li><a href="">Porsche Brasil</a></li>
+                                                <li><a href="">Serviços</a></li>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                                <li><a href="">carros esportivos</a></li>
+                                                <li><a href="">A Porsche num relance</a></li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Sport & Leisure</h3>
+                                        <div>
+                                            <h4>Sport</h4>
+                                            <ul>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                                <li><a href="">carros esportivos</a></li>
+                                                <li><a href="">A Porsche num relance</a></li>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                                <li><a href="">Christophorus Magazine</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Home & Cooking</h3>
+                                        <div>
+                                            <h4>Cooking</h4>
+                                            <ul>
+                                                <li><a href="">Porsche Brasil</a></li>
+                                                <li><a href="">Serviços</a></li>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                                <li><a href="">carros esportivos</a></li>
+                                                <li><a href="">A Porsche num relance</a></li>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Garden</h3>
+                                        <div>
+                                            <h4>Tree</h4>
+                                            <ul>
+                                                <li><a href="">Modelos</a></li>
+                                                <li><a href="">Veículos Seminovos</a></li>
+                                                <li><a href="">Eventos esportivos</a></li>
+                                                <li><a href="">Serviços & Acessórios</a></li>
+                                                <li><a href="">Empresa</a></li>
+                                                <li><a href="">carros esportivos</a></li>
+                                                <li><a href="">A Porsche num relance</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Gifts</h3>
+                                        <div>
+                                            <h4>Gifts</h4>
+                                            <ul>
+                                                <li><a href="">Empresa</a></li>
+                                                <li><a href="">carros esportivos</a></li>
+                                                <li><a href="">A Porsche num relance</a></li>
+                                                <li><a href="">Newsroom & Imprensa</a></li>
+                                                <li><a href="">Empregos & Carreira</a></li>
+                                                <li><a href="">Christophorus Magazine</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>Specials</h3>
+                                        <div>
+                                            <h4>Specials</h4>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="schedule.html">Schedule</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="venue.html">Venue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="register.html">Register</a>
+                        </li>
+
+                        <li class="nav-item nv">
+                            <a class="nav-link waves-effect" href="#">Megamenu<i class="arrow down"></i></a>
+                            <div id="nvbr" class="mega-menu-body nav-mega">
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/android/30965-6-android-file.png" alt="">
+                                    <h3>Android</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident assumenda cum error iusto veniam repellendus eligendi eum impedit voluptates vel.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/apple_logo/26986-5-apple-logo-hd.png" alt="">
+                                    <h3>Apple</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, consequuntur numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/twitter/2-2-twitter-png-file.png" alt="">
+                                    <h3>Twitter</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatibus pariatur sequi dolores asperiores, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/facebook/2-2-facebook-free-download-png.png" alt="">
+                                    <h3>Facebook</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/skype/6-2-skype-png-pic.png" alt="">
+                                    <h3>Skype</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                    <!-- Right -->
+                    <!-- Search form -->
+                    <form class="form-inline md-form m-0 form-sm">
+                        <div id="frm">
+                            <input style="margin: 0px;" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+
+                    </form>
+                    <i id="icn" class="fa fa-search" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <div class="pt-1">
+        <div class="container">
+
+            <!--Section: Jumbotron-->
+            <section class="card wow fadeIn" style="background-image: url(img/assets/gradient.jpg); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Content -->
+                <div class="card-body text-black text-center py-5 px-5 my-5">
+
+                    <h1 class="mb-4 wow fadeIn">
+                        <strong>Dedicated to the Craft of Building Websites</strong>
+                    </h1>
+
+                    <p class="mb-4 lead wow fadeIn ">
+                        Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!
+                    </p>
+                    <a target="_blank" href="register.html" class="btn btn-outline-black btn-lg animated tada">Register Now
+                    </a>
+
+                </div>
+                <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+
+            <hr class="my-5">
+
+            <!--Section: Cards-->
+            <section class="text-center">
+
+                <!--Grid row-->
+                <div class="row mb-4 wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/speakers.jpg" alt="professional speaker">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">World-Class Speakers</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Joining us from all around the world are over twenty speakers, here to share their stories.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInRight">
+
+                        <!-- Card Dark -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/schedule.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">Three Inspiring Days</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Enjoy three inspiring and action-packed days of talks, gatherings, and all-around good times.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/venue.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">The Chicago Theatre</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Some quick example text to build the card title and make up the bulk of the card's content.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Cards-->
+
+
+        </div>
+    </div>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="index.html"> Home |</a>
+
+            <a href="speakers.html"> Speakers |</a>
+
+            <a href="schedule.html"> Schedule |</a>
+
+            <a href="venue.html"> Venue |</a>
+
+            <a href="register.html"> Register</a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright"> © 2018 Copyright:
+            <a href="index.html" target="_blank"> style conference </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script>
+        // Animations initialization
+        new WOW().init();
+
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("main-wrapper").style.top = "0";
+            } else {
+                document.getElementById("main-wrapper").style.top = "-49px";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style conference</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        ul li a {
+            /*background: #a9a9a9*/
+            /*padding: 1px;*/
+            margin-right: 3px;
+            text-decoration: none;
+            /*border-radius: 3px;*/
+            /*            font-weight: 300;*/
+            /*            font-size: 14px;*/
+        }
+
+        .submenu ul li {
+            list-style: none;
+            padding: 1rem;
+        }
+
+        #megamenu {
+            font-size: 14px;
+            font-family: sans-serif;
+            position: relative;
+            display: block;
+            width: 100%;
+            transition: .3s;
+        }
+
+        .submenu {
+            position: absolute;
+            visibility: hidden;
+            overflow: hidden;
+            opacity: 0;
+            z-index: 1;
+            transition: .3s;
+            width: 82.5%;
+            height: 350px;
+            background-color: #fff;
+            border: 1px solid #f4f4f4;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item a {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 15px;
+            margin: 0px;
+            font-family: monospace;
+        }
+
+        .nav-item {
+            padding: 0px 2px;
+            width: 85px;
+            text-align: center;
+            /*            border: 1px solid #f4f4f4;*/
+        }
+
+        #megamenu ul li {
+            border: none;
+        }
+
+        .submenu ul {
+            padding: 1rem;
+            margin: 0rem;
+        }
+
+        .submenu ul li {
+            text-align: center;
+            width: 15%;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        .submenu ul li:last-child {
+            border-bottom: none;
+        }
+
+        #megamenu ul li {
+            margin-right: 20px;
+            padding: 1px;
+            /*            background: #fff;*/
+        }
+
+        #megamenu ul li a:hover {
+            text-decoration: underline;
+        }
+
+        #megamenu ul li:hover>div {
+            opacity: 1;
+            overflow: visible;
+            visibility: visible;
+        }
+
+        .hand {
+            position: absolute;
+            visibility: hidden;
+            overflow: hidden;
+            top: 10px;
+            opacity: 0;
+            z-index: 1;
+            padding: 1rem;
+            height: 100%;
+            margin: 5px;
+            transition: .3s;
+            margin-left: 140px;
+            margin-right: 20px;
+        }
+
+        /*
+        .bd:hover>div {
+            opacity: 1;
+            overflow: visible;
+            visibility: visible;
+        }
+*/
+
+        .submenu ul li:hover {
+            background: #f4f4f4;
+        }
+
+        #megamenu {
+            position: fixed;
+            width: 100%;
+            top: -45px;
+            height: 45px;
+            z-index: 1;
+            background: #fff;
+
+        }
+
+        #megamenu ul li a {
+            background-color: ;
+            /*            color: #333;*/
+            font-family: monospace;
+        }
+
+        #megamenu ul li {
+            height: 40px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #megamenu ul li a {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #megamenu ul li a {
+            /*            text-decoration: underline;*/
+            . margin-top: 6px;
+            padding: 5px;
+        }
+
+        .hand {
+            display: flex;
+            /*            margin: 0px;*/
+            /*            padding: 0px;*/
+            width: 80%;
+            height: 90%
+        }
+
+        .hand img {
+            width: 22%;
+            height: 80%;
+        }
+
+        .hand>div {
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+
+        .navbar-nav>li>a {
+            border-right: 1px solid #f4f4f4;
+        }
+
+        #offer img {
+            width: 100px;
+            height: auto;
+            background-size: cover;
+        }
+
+        #offer1 img {
+            width: 100px;
+            height: auto;
+            background-size: cover;
+        }
+
+        #offer {
+            position: absolute;
+            top: 20px;
+            right: 100px;
+            width: 30%;
+            overflow: hidden;
+        }
+
+        #offer1 {
+            position: absolute;
+            top: 20px;
+            right: 460px;
+            width: 30%;
+            overflow: hidden
+        }
+
+        .submenu ul li:hover>div {
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!--Main Navigation-->
+    <header>
+        <!-- Navbar -->
+        <nav id="megamenu" class="navbar navbar-expand-lg navbar-light white bg-gray p-0 mt-0" style="height:45px; font-weight: 600;">
+            <div class="container">
+                <ul class="navbar-nav" style="padding: 8px;">
+                    <li>
+                        <a class="nav-link waves-effect" href="index.html" style="">WHATS'NEW 
+                            </a>
+                        <div class="submenu">
+                            <ul>
+
+                                <li><a href="" class="bd">SHIRT ></a>
+                                    <div class="hand">
+                                        <img src="https://static7.cilory.com/257037-thickbox_default/no-logo-sky-blue-casual-shirt.jpg" alt="">
+                                        <div>
+                                            <h4 style="color:firebrick; border-bottom: 2px dashed #f4f4f4; display: inline-block;">Shirts</h4>
+
+                                            <p style="color: dimgrey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum alias laboriosam tenetur doloribus quam eligendi minus veritatis eius, tempora delectus minima dignissimos! Voluptate unde eligendi, blanditiis pariatur nam fuga.</p>
+                                            <p style="color: dimgrey">Price: $20</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="">SHOE ></a>
+                                    <div class="hand">
+                                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/vans-1519741575.jpg?crop=1xw:1xh;center,top&resize=768:*" alt="">
+                                        <div>
+                                            <h4 style="color:firebrick; border-bottom: 2px dashed #f4f4f4; display: inline-block;">Shoes</h4>
+
+                                            <p style="color: dimgrey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum alias laboriosam tenetur doloribus quam eligendi minus veritatis eius, tempora delectus minima dignissimos! Voluptate unde eligendi, blanditiis pariatur nam fuga.</p>
+                                            <p style="color: dimgrey">Price: $20</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="">PANT ></a>
+                                    <div class="hand">
+                                        <img src="https://images-dynamic-arcteryx.imgix.net/S18/450x625/Starke-Pant-Silversword.png?auto=format" alt="">
+                                        <div>
+                                            <h4 style="color:firebrick; border-bottom: 2px dashed #f4f4f4; display: inline-block;">Shirts</h4>
+
+                                            <p style="color: dimgrey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum alias laboriosam tenetur doloribus quam eligendi minus veritatis eius, tempora delectus minima dignissimos! Voluptate unde eligendi, blanditiis pariatur nam fuga.</p>
+                                            <p style="color: dimgrey">Price: $20</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="">CAP ></a></li>
+                            </ul>
+                            <div id="offers">
+                                <div id="offer">
+                                    <img src="https://orig00.deviantart.net/9b49/f/2015/298/5/a/simple_wolf_logo_v1_by_dredgeretk-d9eamoo.png" alt="" style="width: 40px;">
+                                    <h4 style="color: firebrick; border-bottom: 1px dashed #f4f4f4;padding-bottom: 5px">About Us</h4>
+
+                                    <p style="color: dimgrey">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum alias laboriosam tenetur doloribus quam eligendi minus veritatis eius, tempora delectus minima dignissimos! Voluptate unde eligendi, blanditiis pariatur nam fuga.</p>
+                                </div>
+                                <div id="offer1">
+                                    <img src="https://www.compuindia.com/dellmegaexchange/images/badge.png" alt="">
+                                    <h4 style="color: firebrick; border-bottom: 1px dashed #f4f4f4;padding-bottom: 5px">Mega Offer</h4>
+
+                                    <p style="color: dimgrey;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rerum alias laboriosam tenetur doloribus quam eligendi minus veritatis eius, tempora delectus minima dignissimos! Voluptate unde eligendi, blanditiis pariatur nam fuga.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link waves-effect" href="schedule.html">PROGRAMS</a>
+                    </li>
+                    <li>
+                        <a class="nav-link waves-effect" href="schedule.html">OPINION</a>
+                    </li>
+                    <li>
+                        <a class="nav-link waves-effect" href="venue.html">MEMBERS</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light white bg-gray p-1 mt-1">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand p-1" href="index.html">
+                    <strong class="font-weight-bold text-monospace blue-text m-1 p-1 z-depth-1 animated bounceInLeft" style="font-family:monospace;">STYLE CONFERENCE</strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto mt-0">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li id="mega1" class="nav-item" href="speakers.html">
+                            <a class="nav-link waves-effect">Speakers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="venue.html">Venue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="register.html">Register</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right -->
+                    <form class="form-inline ">
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="pt-1">
+        <div class="container">
+
+            <!--Section: Jumbotron-->
+            <section class="card wow fadeIn" style="background-image: url(img/assets/gradient.jpg); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Content -->
+                <div class="card-body text-black text-center py-5 px-5 my-5">
+
+                    <h1 class="mb-4 wow fadeIn">
+                        <strong>Dedicated to the Craft of Building Websites</strong>
+                    </h1>
+
+                    <p class="mb-4 wow fadeIn">
+                        Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!
+                    </p>
+                    <a target="_blank" href="register.html" class="btn btn-outline-black btn-lg animated tada">Register Now
+                    </a>
+
+                </div>
+                <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+
+            <hr class="my-5">
+
+            <!--Section: Cards-->
+            <section class="text-center">
+
+                <!--Grid row-->
+                <div class="row mb-4 wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/speakers.jpg" alt="professional speaker">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">World-Class Speakers</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Joining us from all around the world are over twenty speakers, here to share their stories.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInRight">
+
+                        <!-- Card Dark -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/schedule.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">Three Inspiring Days</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Enjoy three inspiring and action-packed days of talks, gatherings, and all-around good times.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/venue.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">The Chicago Theatre</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Some quick example text to build the card title and make up the bulk of the card's content.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Cards-->
+
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="index.html"> Home |</a>
+
+            <a href="speakers.html"> Speakers |</a>
+
+            <a href="schedule.html"> Schedule |</a>
+
+            <a href="venue.html"> Venue |</a>
+
+            <a href="register.html"> Register</a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            © 2018 Copyright:
+            <a href="index.html" target="_blank"> style conference </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script>
+        // Animations initialization
+        new WOW().init();
+
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("megamenu").style.top = "0";
+            } else {
+                document.getElementById("megamenu").style.top = "-45px";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

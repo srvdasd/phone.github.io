@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style conference</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        .navbar .mega-dropdown {
+            position: static !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu {
+            width: 100%;
+            border: none;
+            border-radius: 0;
+        }
+
+        .navbar .dropdown-menu.mega-menu a {
+            padding: 0 0 0 0;
+        }
+
+        .navbar .dropdown-menu.mega-menu a.news-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            -webkit-transition: .2s;
+            transition: .2s;
+            color: #4f4f4f !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu a.news-title:hover {
+            color: #2196f3 !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu a.news-title.smaller {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .navbar .dropdown-menu.mega-menu .sub-menu a.menu-item {
+            color: #4f4f4f !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu .sub-menu a.menu-item:hover {
+            color: #4f4f4f !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu .news-single {
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navbar .dropdown-menu.mega-menu .sub-title {
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navbar .dropdown-menu.mega-menu .p-sm {
+            padding-bottom: 17px;
+        }
+
+        .navbar .dropdown-menu.mega-menu .m-sm {
+            margin-bottom: -5px;
+            font-size: 0.85rem;
+            color: #2196f3 !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu .m-sm:hover {
+            color: #2196f3 !important;
+        }
+
+        .navbar .dropdown-menu.mega-menu .mt-sm {
+            margin-top: -3px;
+        }
+
+        .navbar .dropdown-menu.mega-menu .font-small {
+            font-size: 0.85rem;
+        }
+
+        ul li a {
+            /*background: #a9a9a9*/
+            /*padding: 1px;*/
+            margin-right: 3px;
+            text-decoration: none;
+            /*border-radius: 3px;*/
+            font-weight: 300;
+            font-family: 'Roboto';
+            /*            font-size: 14px;*/
+        }
+
+        header ul {
+            margin: 4px 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!--Main Navigation-->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar bg-gray">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect pl-2" href="index.html">
+                    <strong class="font-weight-bold text-monospace blue-text mr-2 p-2 z-depth-2 animated bounceInLeft" style="font-family:monospace;">STYLE CONFERENCE</strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="speakers.html">Speakers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="venue.html">Venue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="register.html">Register</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News </a>
+                            <div class="dropdown-menu mega-menu row z-depth-1  scrolling-navbar" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="row">
+                                    <div class="col-md-5 col-xl-3 sub-menu mt-5 mb-5 pl-4">
+                                        <ol class="list-unstyled mx-4 dark-grey-text">
+                                            <li class="sub-title text-uppercase mt-sm"><a class="menu-item" href="index.html">Home</a></li>
+                                            <li class="sub-title text-uppercase"><a class="menu-item" href="speakers.html">Speakers</a></li>
+                                            <li class="sub-title text-uppercase"><a class="menu-item" href="schedule.html">Scheule</a></li>
+                                            <li class="sub-title text-uppercase"><a class="menu-item" href="register.html">Register</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-md-7 col-xl-9">
+                                        <div class="row">
+                                            <div class="col-xl-6 mt-5 mb-4 pr-5 clearfix d-none d-md-block">
+                                                <h6 class="sub-title p-sm mb-4 text-uppercase font-weight-bold dark-grey-text">Featured</h6>
+                                                <!--Featured image-->
+                                                <div class="view overlay pb-3">
+                                                    <img src="img/sample.jpg" class="img-fluid z-depth-1" alt="First sample image">
+                                                    <div class="mask rgba-white-slight flex-center">
+
+                                                    </div>
+                                                </div>
+                                                <h4 class="mb-2"><a class="news-title" href="">Lorem ipsum dolor sit amet, consectetur isum adipisicing elit.</a></h4>
+                                                <p class="font-small text-uppercase text-muted">By <a class="m-sm" href="#!">Adam connor</a> - July 14, 2018</p>
+                                            </div>
+                                            <div class="col-xl-6 mt-5 mb-4 pr-5 clearfix d-none d-xl-block">
+                                                <h6 class="sub-title p-sm mb-4 text-uppercase font-weight-bold dark-grey-text">Recent</h6>
+                                                <div class="news-single">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <!--Image-->
+                                                            <div class="view overlay z-depth-1">
+                                                                <img src="img/assets/speakers/aaron-irizarry.jpg" class="img-fluid" alt="Minor sample post image">
+                                                                <div class="mask rgba-white-slight flex-center">
+                                                                    <p></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <a class="news-title smaller mb-1" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, et.</a>
+                                                            <p class="font-small text-uppercase text-muted">July 14, 2018</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="news-single">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <!--Image-->
+                                                            <div class="view overlay z-depth-1">
+                                                                <img src="img/assets/speakers/adam-connor.jpg" class="img-fluid" alt="Minor sample post image">
+                                                                <div class="mask rgba-white-slight flex-center">
+                                                                    <p></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <a class="news-title smaller mb-1" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, ut.</a>
+                                                            <p class="font-small text-uppercase text-muted">July 14, 2018</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="news-single">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <!--Image-->
+                                                            <div class="view overlay z-depth-1">
+                                                                <img src="img/assets/speakers/aj-self.jpg" class="img-fluid" alt="Minor sample post image">
+                                                                <div class="mask rgba-white-slight flex-center">
+                                                                    <p></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <a class="news-title smaller mb-1" href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, ullam.</a>
+                                                            <p class="font-small text-uppercase text-muted">July 14, 2018</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Right -->
+                    <form class="form-inline ">
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="pt-5">
+        <div class="container">
+
+            <!--Section: Jumbotron-->
+            <section class="card wow fadeIn" style="background-image: url(img/assets/gradient.jpg); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Content -->
+                <div class="card-body text-black text-center py-5 px-5 my-5">
+
+                    <h1 class="mb-4 wow fadeIn">
+                        <strong>Dedicated to the Craft of Building Websites</strong>
+                    </h1>
+
+                    <p class="mb-4 wow fadeIn">
+                        <strong>Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!</strong>
+                    </p>
+                    <a target="_blank" href="register.html" class="btn btn-outline-black btn-lg animated tada">Register Now
+                    </a>
+
+                </div>
+                <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+
+            <hr class="my-5">
+
+            <!--Section: Cards-->
+            <section class="text-center">
+
+                <!--Grid row-->
+                <div class="row mb-4 wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/speakers.jpg" alt="professional speaker">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">World-Class Speakers</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Joining us from all around the world are over twenty speakers, here to share their stories.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInRight">
+
+                        <!-- Card Dark -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/schedule.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">Three Inspiring Days</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Enjoy three inspiring and action-packed days of talks, gatherings, and all-around good times.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/venue.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">The Chicago Theatre</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Some quick example text to build the card title and make up the bulk of the card's content.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Cards-->
+
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="index.html"> Home |</a>
+
+            <a href="speakers.html"> Speakers |</a>
+
+            <a href="schedule.html"> Schedule |</a>
+
+            <a href="venue.html"> Venue |</a>
+
+            <a href="register.html"> Register</a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            © 2018 Copyright:
+            <a href="index.html" target="_blank"> style conference </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script>
+        // Animations initialization
+        new WOW().init();
+
+    </script>
+</body>
+
+</html>

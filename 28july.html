@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style conference</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://png.icons8.com/ios/1600/video-conference.png">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!--    ********-->
+    <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <!--    *******************-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Kaushan+Script|Monoton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+    <style>
+        /* ***************************************************************************************       */
+
+        ul li a {
+            /*background: #a9a9a9*/
+            /*padding: 1px;*/
+            margin-right: 6px;
+            text-decoration: none;
+            /*            border-radius: 3px;*/
+            font-weight: 450;
+            /*            font-family: 'Roboto';*/
+            /*            font-size: 14px;*/
+            margin: 4px;
+            padding: 1px;
+            font-family: 'Play', sans-serif !important;
+        }
+
+        .view {
+            font-family: 'Play', sans-serif !important;
+        }
+
+        ul li:first-child {}
+
+
+        body {
+            font-family: 'Cinzel', serif;
+        }
+
+        /************************************************************************************/
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .header-main {
+            background: #FCFCFC;
+        }
+
+
+        .container {
+            position: relative;
+        }
+
+        .navigation-primary>ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .navigation-primary>ul>li {
+            display: inline-block;
+        }
+
+        /*        megamenu nav bar*/
+
+        .navigation-primary>ul>li>a {
+            display: block;
+            color: #519cf8;
+            font-weight: 500;
+            padding: 15px 15px;
+            font-size: 12px;
+            text-transform: uppercase;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .navigation-primary>ul>li:hover>.mega-menu,
+        .navigation-primary>ul>li:hover>.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mega-body p {
+            color: darkslategray;
+        }
+
+        .navigation-primary>ul>li:hover>a {
+            background: #519cf8;
+            color: #fff;
+        }
+
+        .navigation-primary>ul .mega-menu,
+        .navigation-primary>ul .sub-menu {
+            z-index: 9999;
+            padding: 0;
+            position: absolute;
+            background-color: #FFFFFF;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -4px 0px 10px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #519cf8;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(20%);
+        }
+
+        .navigation-primary>ul>li:last-child {
+            border: none;
+        }
+
+        .navigation-primary>ul .mega-menu>li a,
+        .navigation-primary>ul .sub-menu>li a {
+            display: block;
+            text-decoration: none;
+            font-size: 13px;
+            color: #858585;
+        }
+
+        .navigation-primary>ul .mega-menu>li>.sub-menu,
+        .navigation-primary>ul .sub-menu>li>.sub-menu {
+            /*            background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-018-cloudy-knoxville.png);*/
+            /*            background-size: cover;*/
+        }
+
+        .navigation-primary>ul .mega-menu {
+            left: 0;
+            width: 100%;
+            padding: 15px 30px;
+        }
+
+        .navigation-primary>ul .mega-menu li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .navigation-primary>ul .mega-menu li a {
+            padding: 5px 20px;
+            font-size: 13px;
+        }
+
+        .navigation-primary>ul .mega-menu li ul {
+            padding: 0;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li {
+            display: block;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li a {
+            color: #858585;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navigation-primary>ul .mega-menu li ul li:hover a {
+            background: #519cf8;
+            color: white;
+        }
+
+        .navigation-primary>ul .mega-menu>li {
+            margin-right: 30px;
+        }
+
+        .navigation-primary>ul .mega-menu>li>a {
+
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .navigation-primary>ul .sub-menu {
+            min-width: 200px;
+        }
+
+        .navigation-primary>ul .sub-menu li {
+            display: block;
+            position: relative;
+        }
+
+        .navigation-primary>ul .sub-menu li a {
+            padding: 10px 30px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navigation-primary>ul .sub-menu li .sub-menu {
+            border-top: none;
+            left: 100%;
+            top: 0;
+        }
+
+        .navigation-primary>ul .sub-menu li:hover>.mega-menu,
+        .navigation-primary>ul .sub-menu li:hover>.sub-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .navigation-primary>ul .sub-menu li:hover>a {
+            content: "\f103";
+            background: #519cf8;
+            color: white;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 10% 0;
+        }
+
+        .hero h2 {
+            text-transform: uppercase;
+            font-size: 72px;
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+
+        .hero p {
+            color: #a3a3a3;
+        }
+
+        #main-wrapper {
+            /*            background-color: #333;*/
+            position: fixed;
+            top: -49px;
+            height: 49px;
+            width: 100%;
+            border-bottom: .5px solid #81B7FA;
+            /*            border-radius: 5px;*/
+            /*            border-radius: 5px;*/
+            transition: top 0.3s;
+            /*            box-shadow: 2px 5px 10px;*/
+            z-index: 1;
+            /*            color: aliceblue;*/
+            background-color: #fff;
+
+        }
+
+        .form {
+            padding: 10px;
+            color: #fff;
+        }
+
+        .form label,
+        .form input,
+        textarea {
+            display: block;
+            /*            text-transform: uppercase;*/
+            font-size: 12px;
+            font-family: "Oswald", sans-serif;
+            border-radius: 5px;
+            color: #858585;
+            /*            color: #fff;*/
+        }
+
+        .mega-menu-inner>div {
+            /*            font-size: 12px;*/
+            font-family: "Oswald", sans-serif;
+            color: #fff;
+        }
+
+        .mega-menu-body {
+            display: block;
+            color: #858585;
+            padding: 15px 15px;
+            font-size: 12px;
+        }
+
+        .mega-body {
+            width: 20%;
+            height: 40%;
+            padding: 10px;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .mega-body img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .arrow {
+            border: 1px solid #519CF8;
+            opacity: .7;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            margin-left: 5px;
+            margin-bottom: 2px;
+            padding: 2.2px;
+            transform: rotate(45deg);
+            transition: .2s;
+        }
+
+        .navigation-primary>ul>li>a:hover>.arrow {
+            border: 1px solid #333;
+            border-width: 2px 0 0 2px;
+
+        }
+
+        .nav-item a:hover>.arrow {
+            border: 1px solid #333;
+            border-width: 2px 0 0 2px;
+            /*            margin-top: 10px;*/
+            margin-bottom: -1.5px;
+            /*            margin-left: -20px;*/
+        }
+
+        .nav-mega {
+            /*            margin: -400px;*/
+            /*            left: 1px;*/
+            /*                        margin-top: 1px;*/
+            /*            width: 40%;*/
+            /*            margin-left: 25px;*/
+            padding: 15px;
+            z-index: 9999;
+            position: absolute;
+            background-color: #f4f4f4;
+            /*            background-image: url(img/assets/gradient.jpg);*/
+            /*            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px 5px 10px rgba(0, 0, 0, 0.1);*/
+            border-top: 2px solid #519cf8;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(20%);
+            color: #333;
+        }
+
+        .nv:hover>.nav-mega {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .menu a {
+            display: block;
+            padding: .2rem;
+            margin: 1px;
+            /*            color: #000;*/
+            font-size: .875rem;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            color: #51b5d6;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .menu h4 {
+            margin: .5rem 0 .75rem;
+            padding-bottom: .5rem;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.25rem;
+            font-weight: normal;
+            color: dimgrey;
+        }
+
+        .menu h5 {
+            margin: 0;
+            margin-bottom: .5rem;
+            font-size: .875rem;
+            color: cadetblue;
+        }
+
+        .menu {
+            display: inline-block;
+            border-radius: .2rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            /*            background-image: url(img/assets/gradient.jpg);*/
+        }
+
+
+
+
+        .menu:hover>li {
+            cursor: pointer;
+            display: block;
+        }
+
+
+        .menu li h3 {
+            width: 12rem;
+            margin: 0px;
+            padding: .65rem .75rem;
+            border: 1px solid transparent;
+            border-width: 1px 0;
+            background: #f4f4f4;
+            position: relative;
+            z-index: 10;
+            font-size: .875rem;
+            font-weight: 300;
+            cursor: default;
+
+        }
+
+        .menu li:hover h3 {
+            width: 13.013rem;
+            border-radius: 5px 60px 60px 5px;
+            border-color: #84B9FA;
+        }
+
+        .menu li:hover .menu li {
+            color: antiquewhite;
+        }
+
+        .menu li:hover div {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0%);
+
+            /*            text-align: center;*/
+        }
+
+
+        .menu li div {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(60%);
+            /*
+            visibility: hidden;
+            overflow: hidden;
+*/
+            margin-top: -16.6px;
+            transition: .3s ease-in-out;
+            width: 400px;
+            padding: 1rem 1.2rem;
+            background-image: url(img/assets/gradient.jpg);
+            border-left: 1px solid #84B9FA;
+            border-top: 2px solid #519cf8;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 12rem;
+            z-index: 1;
+            height: 365px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu li div {
+            padding-left: 40px;
+        }
+
+        #nvbr {
+            position: absolute;
+            left: 0px;
+        }
+
+
+        .menu h3:hover {
+            background-color: #84B9FA;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .menu li a {
+            /*            display: inline-block;*/
+            /*            background-color: #84B9FA;*/
+            color: dodgerblue;
+            /*            display: none;*/
+            text-decoration: none;
+            margin: 2px;
+            padding: 5px;
+        }
+
+        .menu li:hover>h3 {
+            background-color: #84B9FA;
+            color: #fff;
+        }
+
+        .menu div ul li a {
+            color: #4A96F3;
+            font-weight: 500;
+        }
+
+        /*        another mega menu*/
+
+        .cars {
+            /*            width: 19%;*/
+            /*            height: 100%;*/
+            background-color: #ccc;
+            /*            height: 100%;*/
+            /*            text-align: center;*/
+            /*            box-shadow: -2px -2px 10px;*/
+        }
+
+        .list {
+            margin: 0px;
+            padding: 5px 0px;
+        }
+
+        .list li {
+            display: inline-block;
+            list-style: none;
+            margin: 2px;
+            padding: 2px;
+            background: #fff;
+            cursor: pointer;
+
+            /*            background: #d5001c;*/
+        }
+
+        .list li a {
+            text-decoration: none;
+            font-family: 'Sunflower', sans-serif !important;
+            color: #333;
+            opacity: .7;
+            font-weight: 750;
+        }
+
+        /*        Details of the cars      */
+
+        /*        car details     */
+
+        .pic {
+            /*            display: flex;*/
+            /*            justify-content: center;*/
+            width: 100%;
+            height: 100vh;
+        }
+
+        .view {
+            background-color: #fff;
+            width: 100%;
+            height: 25vh;
+            display: flex;
+            justify-content: space-around;
+            /*            opacity: .8;*/
+            align-items: center;
+            border-top: 1px solid #ccc;
+        }
+
+        .view div {
+            border-right: 1px solid #ccc;
+            /*            border-left:  1px solid #ccc;*/
+            padding-right: 60px;
+        }
+
+        .view div:last-child {
+            border-right: none;
+        }
+
+        .pic1 {
+            background-image: url('https://files3.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-718-cayman/normal/9e78560c-99bd-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic2 {
+            background-image: url('https://files3.porsche.com/filestore/image/multimedia/none/e-performance-missione-flyout-background/normal/0bf18c6a-1d44-11e8-bbc5-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic3 {
+            background-image: url('https://files2.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-panamera/normal/648c1f8e-99bf-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+        .pic4 {
+            background-image: url('https://files1.porsche.com/filestore/image/multimedia/none/jdp-2016-modelseries-flyout-911carrera/normal/ba0ef143-99bd-11e6-9f1b-0019999cd470/porsche-normal.jpg');
+            background-size: cover;
+            /*            background-position: center;*/
+            background-repeat: no-repeat;
+        }
+
+
+
+        .pic {
+            /*            position: relative;*/
+            width: 100%;
+            height: 65%;
+        }
+
+        .view {
+            width: 100%;
+            height: 35%;
+        }
+
+        .pic {
+            position: relative;
+        }
+
+        .pic img {
+            position: absolute;
+            /*
+            display: flex;
+            justify-content: center;
+            align-items: center;
+*/
+            z-index: 1;
+            bottom: -16.5%;
+            right: 16%;
+            /*            bottom: 90px;*/
+            width: 50%;
+
+        }
+
+        .list li {
+            display: flex;
+            /*                        justify-content: center;*/
+            align-items: center;
+            text-align: left;
+            /*            height: 30px;*/
+            margin: 0px;
+            padding: 15px;
+            /*            margin-bottom: 3px;*/
+            border-bottom: .5px solid #ccc;
+            transition: .3s;
+            font-size: 16px;
+        }
+
+        .list li:last-child {
+            border-bottom: none;
+        }
+
+
+
+        body {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .megas {
+            margin: auto;
+            /*            overflow-y: scroll;*/
+            /*            padding: 6px;*/
+            width: 96vw;
+            height: 80vh;
+            position: relative;
+        }
+
+
+
+
+        .list li:hover {
+            /*            background-color: #d5001c;*/
+            background-color: #333;
+
+        }
+
+        .list li:hover {
+            box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1), -4px 0px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .list li:hover>a {
+            color: #B6BCD1;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .megas .cars {
+            /*            position: relative;*/
+            width: 22%;
+            height: auto;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+
+
+        .car {
+            border: 1px solid #e3e4e4;
+            /*            position: relative;*/
+            /*
+            display: flex;
+            flex-direction: column;
+*/
+            /*            margin: px;*/
+            /*            height: 10%;*/
+            position: absolute;
+            width: 78%;
+            height: 100%;
+            /*            margin-left: 120px;*/
+            /*            top: 0px;*/
+            bottom: 0px;
+            /*            left: 40px;*/
+            /*            right: 0px;*/
+            left: 22%;
+        }
+
+        #first_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(20%);
+        }
+
+
+
+        #first:hover>#first_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #second_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(20%);
+        }
+
+
+
+        #second:hover>#second_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #third_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(20%);
+        }
+
+
+
+        #third:hover>#third_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        #fourth_car {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateY(20%);
+        }
+
+
+
+        #fourth:hover>#fourth_car {
+            margin: 0px;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .megas:hover {
+            margin: 0 auto;
+            background-color: #fff;
+            zoom: 1;
+            /*            background-color: rgba(0, 0, 0, .7);*/
+            /*
+ width: 100%; top: 65px;
+*/
+            z-index: 19;
+            /*            display: none;*/
+        }
+
+        /*
+        .car {
+            box-shadow: 10px 5px 40px rgba(0, 0, 0, 0.1), -10px 5px 40px rgba(0, 0, 0, 0.1);
+        }
+*/
+
+        .list li {
+            /*
+ border-left: 1px solid #ccc; border-right: 1px solid #ccc;
+*/
+        }
+
+        .footer-nav a {
+            color: #333;
+        }
+
+        .nav-item:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Main Navigation-->
+    <header>
+        <div id="main-wrapper" class="header-main">
+            <div class="container">
+                <nav class="navigation-primary">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Mega Menu<i class="arrow down"></i></a>
+                            <ul class="mega-menu">
+                                <li><a href="">Museu Porsche</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Modelos</a></li>
+                                        <li><a href="">Veículos Seminovos</a></li>
+                                        <li><a href="">Eventos esportivos</a></li>
+                                        <li><a href="">Serviços & Acessórios</a></li>
+                                        <li><a href="">Empresa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">E-Performance</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Carros esportivos</a></li>
+                                        <li><a href="">A Porsche num relance</a></li>
+                                        <li><a href="">Newsroom & Imprensa</a></li>
+                                        <li><a href="">Empregos & Carreira</a></li>
+                                        <li><a href="">Christophorus Magazine</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">Anos de fascínio por </a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Sustentabilidade</a></li>
+                                        <li><a href="">Porsche Brasil</a></li>
+                                        <li><a href="">Serviços</a></li>
+                                        <li><a href="">Newsroom & Imprensa</a></li>
+                                        <li><a href="">Empregos & Carreira</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">O Princípio Porsche</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Modelos</a></li>
+                                        <li><a href="">Veículos Seminovos</a></li>
+                                        <li><a href="">Eventos esportivos</a></li>
+                                        <li><a href="">Serviços & Acessórios</a></li>
+                                        <li><a href="">Empresa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Porsche</a>
+
+                                    <ul class="mega-menu-inner">
+                                        <li><a href="">Eventos esportivos</a></li>
+                                        <li><a href="">Serviços & Acessórios</a></li>
+                                        <li><a href="">Modelos</a></li>
+                                        <li><a href="">Veículos Seminovos</a></li>
+                                        <li><a href="">Empresa</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">Blog</a></li>
+                        <!--
+                        
+                        
+                        
+                        
+                        
+                        
+-->
+                        <li><a href="">Mega Menu 2 <i class="arrow down"></i></a>
+                            <div class="mega-menu mega-menu-body">
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/android/30965-6-android-file.png" alt="">
+                                    <h3>Android</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident assumenda cum error iusto veniam repellendus eligendi eum impedit voluptates vel.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/apple_logo/26986-5-apple-logo-hd.png" alt="">
+                                    <h3>Apple</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, consequuntur numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/twitter/2-2-twitter-png-file.png" alt="">
+                                    <h3>Twitter</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas voluptatibus pariatur sequi dolores asperiores, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/facebook/2-2-facebook-free-download-png.png" alt="">
+                                    <h3>Facebook</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                                <div class="mega-body">
+                                    <img src="https://freepngimg.com/download/skype/6-2-skype-png-pic.png" alt="">
+                                    <h3>Skype</h3>
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur Illum, maxime. Beatae maxime corrupti fugit officia commodi laudantium quisquam, placeat praesentium molestiae iste alias numquam.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <!--
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+-->
+                        <li><a href="">Sub Menu <i class="arrow down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="">Porsche num relance</a></li>
+                                <li><a href="">Newsroom & Imprensa</a></li>
+                                <li><a href="">Submenus    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;  >></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">Porsche Brasil</a></li>
+                                        <li><a href="">Serviços</a></li>
+                                        <li><a href="">Empresa &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;>></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="">Modelos</a></li>
+                                                <li><a href="">Veículos Seminovos</a></li>
+                                                <li><a href="">Eventos esportivos</a></li>
+                                                <li><a href="">Serviços & Acessórios</a></li>
+                                                <li><a href="">Empresa</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="">Porsche Brasil</a></li>
+                                        <li><a href="">Serviços</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="">Serviços & Acessórios</a></li>
+                                <li><a href="">Empresa</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="">Contact Us<i class="arrow down"></i></a>
+                            <div class="sub-menu">
+                                <div class="form">
+                                    <div>
+                                        <label for="Name">Name:</label>
+                                        <input style="width: 100%; background-color:aliceblue" type="text" placeholder="Enter Name...">
+                                    </div><br>
+                                    <div>
+                                        <label for="Name">Message:</label>
+                                        <textarea style="background-color:aliceblue " name="" id="" cols="30" rows="5" value="Comment here..."></textarea>
+                                    </div><br>
+                                    <input style="cursor: pointer; width: 94%;" class="btn btn-mdb-color btn-sm" type="submit" value="Send">
+                                </div>
+                            </div>
+                        </li>
+                        <li style="float: right;"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <div class="sub-menu" style="border: none;">
+                                <input style="position: fixed; top:-44px; border-radius: 0px; right: 200px; margin:5px; background-color: aliceblue;" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar fixed-top navbar-expand-lg justify-content-center navbar-light white bg-black m-0 p-0">
+            <div class="container" style="position: relative; margin: 0px; padding: 0px;">
+
+                <!-- Brand -->
+                <a class="navbar-brand waves-effect pl-2 pr-2 mr-4" href="index.html">
+                    <strong class=" p-3  wow fadeIn" style="font-family: 'Courgette', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Monoton', cursive;
+ color: #415288; box-shadow: 2px 2px 10px rgba(0,0,0,0.1),-2px 2px 10px rgba(0,0,0,0.1); font-size: 16px;">STYLE CONFERENCE</strong>
+                </a>
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item nv pt-4 pb-4 mt-0 mb-0">
+                            <a class="nav-link waves-effect" href="#" style="">Megamenu<i class="arrow down"></i></a>
+                            <!--                            nav-mega-->
+                            <div id="nvbr" class="mega-menu-body nav-mega" style="z-index: 1; background: none; border-top: none;">
+                                <div class="megas" style="border-top: none; position: absolute; top: 83%; left: 630%; z-index: 1; width: 75vw; ">
+                                    <div class="cars" style="border: none">
+                                        <ul class="list">
+                                            <li id="first"><a href="">712 &nbsp;Cyman modal car</a>
+                                                <div id="first_car" class="car">
+                                                    <div class="pic pic1">
+                                                        <img src="https://files2.porsche.com/filestore/image/multimedia/none/jdp-2016-982-718-c7-modelimage-sideshot/model/d3b4f827-3356-11e8-bbc5-0019999cd470/porsche-model.png" alt="">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div>
+                                                            <h3>From $ 56,900.00*</h3>
+                                                            <p>MSRP</p>
+                                                        </div>
+                                                        <div>
+                                                            <h3>300 hp</h3>
+                                                            <p>Max. power</p>
+                                                        </div>
+                                                        <div>
+                                                            <h3>4.9 s</h3>
+                                                            <p>0 - 60 mph</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="second"><a href="">911 Mission Turismo </a>
+                                                <div id="second_car" class="car">
+                                                    <div class="pic pic2">
+                                                        <img src="https://files1.porsche.com/filestore/image/multimedia/none/e-performance-missione-modelimage-sideshot/model/90d63f92-1d44-11e8-bbc5-0019999cd470/porsche-model.png" alt="">
+                                                    </div>
+                                                    <div class="view">
+                                                        <div>
+                                                            <h3>&lt; 600 hp</h3>
+                                                            <p>Max. power</p>
+                                                        </div>
+                                                        <div>
+                                                            <h3> &gt; 3.5s </h3>
+                                                            <p>0 - 60 mphr</p>
+                                                        </div>
+                                                        <div>
+                                                            <h3>8.9 s</h3>
+                                                            <p>0 - 220 mph</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="third"><a href="">Our Services</a>
+                                                <div id="third_car" class="car">
+                                                    <div style=" background-color: #fff; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-auto-rows: minmax(100,auto); grid-gap: 1em;">
+                                                        <ul style="align-self: start;">
+                                                            <li style="padding-bottom: 5px; border-bottom: 1px solid #85B9FA;">
+                                                                <a href="">
+                                                                    <h2 style="margin: 0px; padding: 0px; border-right: none; font-weight: bold">Services</h2>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="">Planning</a></li>
+                                                            <li><a href="">Shipping</a></li>
+                                                            <li><a href="">E-commerce</a></li>
+                                                            <li><a href="">Payement</a></li>
+                                                        </ul>
+                                                        <ul style="align-self: start;">
+                                                            <li style="padding-bottom: 5px;  border-bottom: 1px solid #85B9FA;">
+                                                                <a href="">
+                                                                    <h2 style="margin: 0px; padding: 0px; border-right: none; font-weight: bold;">Planning</h2>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="">Payement</a></li>
+                                                            <li><a href="">Services</a></li>
+                                                            <li><a href="">E-commerce</a></li>
+                                                            <li><a href="">Planning</a></li>
+                                                        </ul>
+                                                        <ul style="align-self: start;">
+                                                            <li style="padding-bottom: 5px;  border-bottom: 1px solid #85B9FA;">
+                                                                <a href="">
+                                                                    <h2 style="margin: 0px; padding: 0px; border-right: none; font-weight: bold;">Shipping</h2>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="">Shipping</a></li>
+                                                            <li><a href="">Services</a></li>
+                                                            <li><a href="">E-commerce</a></li>
+                                                            <li><a href="">Payement</a></li>
+                                                        </ul>
+                                                        <ul style="align-self: start;">
+                                                            <li style="padding-bottom: 5px;  border-bottom: 1px solid #85B9FA;">
+                                                                <a href="">
+                                                                    <h2 style="margin: 0px; padding: 0px; border-right: none; font-weight: bold;">Payement</h2>
+                                                                </a>
+                                                            </li>
+                                                            <li><a href="">Services</a></li>
+                                                            <li><a href="">Shipping</a></li>
+                                                            <li><a href="">E-commerce</a></li>
+                                                            <li><a href="">Payement</a></li>
+                                                        </ul>
+
+                                                    </div>
+                                                    <div class="view">
+                                                        <div style="padding-left: 20px;">
+                                                            <h2>Ship here</h2>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                                        </div>
+                                                        <div style="padding-left: 20px;">
+                                                            <h2> Contact Us </h2>
+                                                            <p href="">styleconference@gmail.com</p>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </li>
+                                            <li id="fourth"><a href="">Speakers</a>
+                                                <div id="fourth_car" class="car">
+                                                    <div style="display: flex; justify-content: space-around; align-items:center; background-color: #fff; ">
+                                                        <div>
+                                                            <img src="/mdbsc/img/assets/speakers/adam-connor.jpg" alt="">
+                                                            <div style="text-align: center">
+                                                                <h4 style="padding-top: 5px">Adam Connqr</h4>
+                                                                <!-- Facebook-->
+                                                                <a class="fa-sm fb-ic">
+          <i class="fa fa-facebook"> </i>
+</a>
+                                                                <!-- Twitter -->
+                                                                <a class="fa-sm tw-ic">
+          <i class="fa fa-twitter"> </i>
+        </a>
+                                                                <!--Dribbble -->
+                                                                <a class="fa-sm dribbble-ic">
+          <i class="fa fa-dribbble"> </i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <img src="/mdbsc/img/assets/speakers/bermon-painter.jpg" alt="">
+                                                            <div style="text-align: center">
+                                                                <div style="text-align: center">
+                                                                    <h4 style="padding-top: 5px">Aq Self</h4>
+                                                                    <!-- Facebook-->
+                                                                    <a class="fa-sm fb-ic">
+          <i class="fa fa-facebook"> </i>
+</a>
+                                                                    <!-- Twitter -->
+                                                                    <a class="fa-sm tw-ic">
+          <i class="fa fa-twitter"> </i>
+        </a>
+                                                                    <!--Dribbble -->
+                                                                    <a class="fa-sm dribbble-ic">
+          <i class="fa fa-dribbble"> </i>
+                                                                </a>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <img src="/mdbsc/img/assets/speakers/brad-smith.jpg" alt="">
+                                                            <div style="text-align: center">
+                                                                <h4 style="padding-top: 5px">Brad Quilo</h4>
+                                                                <!-- Facebook-->
+                                                                <a class="fa-sm fb-ic">
+          <i class="fa fa-facebook"> </i>
+</a>
+                                                                <!-- Twitter -->
+                                                                <a class="fa-sm tw-ic">
+          <i class="fa fa-twitter"> </i>
+        </a>
+                                                                <!--Dribbble -->
+                                                                <a class="fa-sm dribbble-ic">
+          <i class="fa fa-dribbble"> </i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="view">
+                                                        <div style="padding-left: 20px; box-shadow: 0px;">
+                                                            <h2>About Us</h2>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quo dolorem qui commodi dolor dignissimos deserunt asperiores blanditiis voluptatibus veritatis? </p>
+                                                        </div>
+                                                        <div style="padding-left: 20px;">
+                                                            <h2> Contact Us </h2>
+                                                            <p href="">styleconference@gmail.com</p>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item active pt-4 pb-4 mt-0 mb-0">
+                            <a class="nav-link waves-effect " href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item  pt-4 pb-4 mt-0 mb-0">
+                            <a class="nav-link waves-effect" href="speakers.html">Speakers</a>
+                        </li>
+
+
+
+                        <li class="nav-item  pt-4 pb-4 mt-0 mb-0">
+                            <a class="nav-link waves-effect" href="schedule.html">Schedule</a>
+                        </li>
+
+                        <li class="nav-item  pt-4 pb-4 mt-0 mb-0">
+                            <a class="nav-link waves-effect" href="venue.html">Venue</a>
+                        </li>
+                        <li class="nav-item  pt-4 pb-4 mt-0 mb-0">
+                            <a class="nav-link waves-effect" href="register.html">Register</a>
+                        </li>
+
+
+
+
+                    </ul>
+
+                    <!-- Right -->
+                    <!-- Search form -->
+                    <form class="form-inline md-form m-0 form-sm">
+                        <div id="frm">
+                            <input style="margin: 0px;" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                        </div>
+
+                    </form>
+                    <i id="icn" class="fa fa-search" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+        <!-- Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <div class="pt-5">
+        <div class="container">
+
+            <!--Section: Jumbotron-->
+            <section class="card wow fadeIn" style="background-image: url(img/assets/gradient.jpg); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Content -->
+                <div class="card-body text-black text-center py-5 px-5 my-5">
+
+                    <h1 class="mb-4 wow fadeIn">
+                        <strong>Dedicated to the Craft of Building Websites</strong>
+                    </h1>
+
+                    <p class="mb-4 lead wow fadeIn ">
+                        Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!
+                    </p>
+                    <a target="_blank" href="register.html" class="btn btn-outline-black btn-lg animated tada">Register Now
+                    </a>
+
+                </div>
+                <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+
+            <hr class="my-5">
+
+            <!--Section: Cards-->
+            <section class="text-center">
+
+                <!--Grid row-->
+                <div class="row mb-4 wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/speakers.jpg" alt="professional speaker">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">World-Class Speakers</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Joining us from all around the world are over twenty speakers, here to share their stories.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-outline-secondary waves-effect btn-sm">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInRight">
+
+                        <!-- Card Dark -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/schedule.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">Three Inspiring Days</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Enjoy three inspiring and action-packed days of talks, gatherings, and all-around good times.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-outline-secondary waves-effect btn-sm">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/venue.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">The Chicago Theatre</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Some quick example text to build the card title and make up the bulk of the card's content.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-outline-secondary waves-effect btn-sm">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Cards-->
+
+
+        </div>
+    </div>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small special-color-dark lighten-1 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4 footer-nav">
+            <a class="footer-copyright" href="index.html"> Home |</a>
+
+            <a class="footer-copyright" href="speakers.html"> Speakers |</a>
+
+            <a class="footer-copyright" href="schedule.html"> Schedule |</a>
+
+            <a class="footer-copyright" href="venue.html"> Venue |</a>
+
+            <a class="footer-copyright" href="register.html"> Register</a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright p-2"> © 2018 Copyright:
+            <a class="footer-copyright" href="index.html" target="_blank"> style conference </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script>
+        // Animations initialization
+        new WOW().init();
+
+        //        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        //        window.onscroll = function() {
+        //            scrollFunction()
+        //        };
+        //
+        //        function scrollFunction() {
+        //            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        //                document.getElementById("main-wrapper").style.top = "0";
+        //            } else {
+        //                document.getElementById("main-wrapper").style.top = "-49px";
+        //            }
+        //        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style conference</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <style>
+        ul li a {
+            /*background: #a9a9a9*/
+            /*padding: 1px;*/
+            margin-right: 3px;
+            text-decoration: none;
+            /*border-radius: 3px;*/
+            font-weight: 300;
+            font-family: 'Roboto';
+            /*            font-size: 14px;*/
+        }
+
+        .nav-item a {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 15px;
+            margin: 0px;
+            font-family: monospace;
+        }
+
+        .nav-item {
+            padding: 0px 2px;
+            width: 85px;
+            text-align: center;
+            border: 1px solid #f4f4f4;
+        }
+
+        /* Reset */
+
+        .nav,
+        .nav a,
+        .nav ul,
+        .nav li,
+        .nav div {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+        }
+
+        .nav a {
+            text-decoration: none;
+        }
+
+        .nav li {
+            list-style: none;
+        }
+
+        /* Menu Container */
+
+        .nav {
+            display: inline-block;
+            position: relative;
+            z-index: 500;
+        }
+
+        /* Menu List */
+
+        .nav>li {
+            display: block;
+            float: left;
+        }
+
+        /* Menu Links */
+
+        .nav>li>a {
+            position: relative;
+            display: block;
+            z-index: 510;
+            height: 54px;
+            padding: 0 20px;
+            line-height: 54px;
+
+            font-family: Helvetica;
+            font-weight: bold;
+            font-size: 13px;
+            color: #fcfcfc;
+            text-shadow: 0 0 1px rgba(0, 0, 0, .35);
+            background: #333;
+            transition: all .3s ease;
+        }
+
+        .nav>li:hover>a {
+            background: #333;
+        }
+
+        .nav>li:first-child>a {
+            border-radius: 3px 0 0 3px;
+            border-left: none;
+        }
+
+        /* Menu Dropdown */
+
+        .nav>li>div {
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 50px;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            background: #ffffff;
+            border-radius: 0 0 3px 3px;
+            transition: all .3s ease .15s;
+        }
+
+        .nav>li:hover>div {
+            opacity: 1;
+            visibility: visible;
+            overflow: visible;
+        }
+
+        /* Menu Content Styles */
+
+        .nav .nav-column {
+            float: left;
+            width: 20%;
+            padding: 5%;
+        }
+
+        .nav .nav-column h3 {
+            margin: 20px 0 10px 0;
+            line-height: 18px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .nav .nav-column li a {
+            display: block;
+            line-height: 26px;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            color: #888888;
+        }
+
+        .nav .nav-column li a:hover {
+            color: #888888;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        #menu-wrapper {
+            background-color: #333;
+            position: fixed;
+            top: -54px;
+            height: 54px;
+            width: 100%;
+            display: flex;
+            transition: .3s;
+            z-index: 1;
+
+        }
+
+        .nav li a:hover {
+            background-color: #1CBFD0;
+        }
+
+        /*mega menu on main nav*/
+
+        .megamenu {
+            /*            margin-top: 5px;*/
+            margin-left: -270px;
+            width: 90%;
+            position: absolute;
+            clear: both;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            /*            height: 400px;*/
+            /*            display: none;*/
+            border: 1px solid #F4F5F7;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), -5px 5px 5px rgba(0, 0, 0, 0.1);
+            transition: background 1s ease;
+        }
+
+        #megahand1 {
+            display: none;
+            z-index: 1;
+        }
+
+        .submenu {
+            text-align: center;
+            margin: 5px;
+            padding: 1rem;
+            /*            background-color: deepskyblue;*/
+        }
+
+
+
+        #ms-1 {
+
+            grid-row: 1/3;
+            grid-column: 1;
+            border-right: 1px solid #f4f4f4;
+        }
+
+        #ms-1 h4 {
+            margin-bottom: 40px;
+        }
+
+        #ms-1 li {
+            /*            margin-top: 5px;*/
+            padding: 5px;
+            border-bottom: 1px solid #f4f4f4;
+        }
+
+        #ms-2 {
+            grid-row: 1;
+            grid-column: 2/4;
+            display: flex;
+            border-bottom: 1px solid #f4f4f4;
+
+        }
+
+        #ms-3 {
+            grid-row: 2;
+            grid-column: 2/4;
+
+            /*            justify-content: space-between;*/
+            padding: 0px;
+
+        }
+
+        #ms-2 img {
+            margin: 0px;
+            padding: 0px;
+            width: 20%;
+            height: 90%;
+        }
+
+        #ms-2 .intro {
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        h4 {
+            margin-bottom: 0px;
+        }
+
+        #ms-3 {
+            text-align: left;
+            display: flex;
+        }
+
+        #ms-3 img {
+            margin-bottom: 10px;
+            padding: 0px;
+            width: 6rem;
+            height: 6rem;
+        }
+
+        #ms-3>div {
+
+            margin: 5px;
+            padding: 5px;
+            /*            background-color: aliceblue;*/
+        }
+
+        #ms-3>div:first-child {
+            border-right: 1px solid #f4f4f4;
+        }
+
+        #megahand1 li:hover {
+            background-color: #F4F5F7;
+        }
+
+        #megahand2 li:hover {
+            background-color: #F4F5F7;
+        }
+
+
+        .submenu li {
+            list-style: none;
+        }
+
+        #megahand2 {
+            padding: 10px;
+            text-align: center;
+            margin-left: -350px;
+            width: 90%;
+            position: absolute;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            /*            height: 400px;*/
+            /*            transition: 5s;*/
+            display: none;
+            border: 1px solid #F4F5F7;
+            margin-right: 20px;
+        }
+
+        .submenu1 {
+            padding-left: 0px;
+            margin: 5px;
+            float: left;
+        }
+
+        .submenu1 li {
+            padding: 5px;
+            list-style: none;
+            border-bottom: 1px solid #f4f4f4;
+
+        }
+
+        .submenu1 li:last-child {
+            list-style: none;
+            border-bottom: 0px solid #f4f4f4;
+
+        }
+
+        .submenu li a:hover {
+            /*            text-decoration: underline;*/
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
+
+        @media all and (max-width:990px) {
+            .megamenu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--Main Navigation-->
+    <header>
+        <div id="menu-wrapper">
+
+            <ul class="nav">
+                <li>
+                    <a href="#">What's new</a>
+                    <div>
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Version</a></li>
+                <li>
+                    <a href="#">Top rated</a>
+                    <div>
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+
+                            <h3>Brands</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-column">
+                            <h3>Home</h3>
+                            <ul>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                                <li><a href="#">link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#">All Categories</a></li>
+            </ul>
+
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light white bg-gray p-0 m-0 ">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand p-1" href="index.html">
+                    <strong class="font-weight-bold text-monospace blue-text m-1 p-1 z-depth-1 animated bounceInLeft" style="font-family:monospace;">STYLE CONFERENCE</strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto mt-0">
+                        <li class="nav-item active">
+                            <a class="nav-link waves-effect" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li id="mega1" class="nav-item" href="speakers.html">
+                            <a class="nav-link waves-effect" onmouseover="document.getElementById('megahand1').style.display = 'grid';" onmouseout="document.getElementById('megahand1').style.display = 'none';">Speakers</a>
+                            <div class="megamenu wow fadeIn" id="megahand1" onmouseover="document.getElementById('megahand1').style.display = 'grid';" onmouseout="document.getElementById('megahand1').style.display = 'none';">
+                                <ul id="ms-1" class="submenu">
+                                    <h4><strong>Mega Links</strong></h4>
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Program</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                                <div id="ms-2" class="submenu">
+                                    <img src="img/assets/speakers/adam-connor.jpg" alt="adam">
+                                    <div class="intro">
+                                        <h5>Adam Connor</h5>
+                                        <p style="margin-bottom: 5px">Web Designer</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus recusandae numquam reprehenderit laboriosam sit aspernatur incidunt? Maxime, quibusdam molestias sit saepe ducimus rem quam dolore a, inventore ut! Debitis, asperiores.</p>
+                                        <a href="speakers.html">view more</a>
+                                    </div>
+
+                                </div>
+                                <div id="ms-3" class="submenu">
+                                    <div>
+                                        <img src="img/assets/speakers/aj-self.jpg" alt="">
+                                        <h4>Aj Self </h4>
+                                        <p style="margin-bottom: 5px">Web Designer</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum id expedita quo quis vitae a praesentium sunt, impedit delectus unde.</p>
+                                        <a href="speakers.html">view more</a>
+                                    </div>
+                                    <div>
+                                        <img src="img/assets/speakers/arman-ghosh.jpg" alt="">
+                                        <h4>Arman Ghosh</h4>
+                                        <p style="margin-bottom: 5px">Web Designer</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam impedit voluptas cupiditate minus sunt numquam placeat.</p>
+                                        <a href="speakers.html">view more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="mega1" class="nav-item" onmouseover="document.getElementById('megahand2').style.display = 'grid';" onmouseout="document.getElementById('megahand2').style.display = 'none';" href="speakers.html">
+                            <a class="nav-link waves-effect">Programs</a>
+                            <div class="megamenu wow fadeIn" id="megahand2" onmouseover="document.getElementById('megahand2').style.display = 'grid';" onmouseout="document.getElementById('megahand2').style.display = 'none';">
+                                <ul class="submenu1">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Programe</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                                <ul class="submenu1">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Programe</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                                <ul class="submenu1">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Programe</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                                <ul class="submenu1">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Programe</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                                <ul class="submenu1">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Programe</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+                                <ul class="submenu1">
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Programe</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                </ul>
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="schedule.html">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="venue.html">Venue</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="register.html">Register</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right -->
+                    <form class="form-inline ">
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="pt-1">
+        <div class="container">
+
+            <!--Section: Jumbotron-->
+            <section class="card wow fadeIn" style="background-image: url(img/assets/gradient.jpg); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Content -->
+                <div class="card-body text-black text-center py-5 px-5 my-5">
+
+                    <h1 class="mb-4 wow fadeIn">
+                        <strong>Dedicated to the Craft of Building Websites</strong>
+                    </h1>
+
+                    <p class="mb-4 wow fadeIn">
+                        <strong>Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!</strong>
+                    </p>
+                    <a target="_blank" href="register.html" class="btn btn-outline-black btn-lg animated tada">Register Now
+                    </a>
+
+                </div>
+                <!-- Content -->
+            </section>
+            <!--Section: Jumbotron-->
+
+            <hr class="my-5">
+
+            <!--Section: Cards-->
+            <section class="text-center">
+
+                <!--Grid row-->
+                <div class="row mb-4 wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/speakers.jpg" alt="professional speaker">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">World-Class Speakers</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Joining us from all around the world are over twenty speakers, here to share their stories.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInRight">
+
+                        <!-- Card Dark -->
+                        <div class="card card-cascade">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/schedule.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">Three Inspiring Days</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Enjoy three inspiring and action-packed days of talks, gatherings, and all-around good times.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 animated bounceInLeft">
+
+                        <!-- Card Dark -->
+                        <div class="card">
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top" src="img/assets/home/venue.jpg" alt="Card image cap">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body rounded-bottom">
+
+                                <!-- Title -->
+                                <h4 class="card-title">The Chicago Theatre</h4>
+                                <hr class="hr-black">
+                                <!-- Text -->
+                                <p class="card-text mb-4">Some quick example text to build the card title and make up the bulk of the card's content.</p>
+                                <!-- Link -->
+                                <a href="speaker.html" class="btn btn-mdb-color btn-md">View More</a>
+
+                            </div>
+
+                        </div>
+                        <!-- Card Dark -->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Cards-->
+
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="index.html"> Home |</a>
+
+            <a href="speakers.html"> Speakers |</a>
+
+            <a href="schedule.html"> Schedule |</a>
+
+            <a href="venue.html"> Venue |</a>
+
+            <a href="register.html"> Register</a>
+        </div>
+        <!-- Social icons -->
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            © 2018 Copyright:
+            <a href="index.html" target="_blank"> style conference </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!-- Initializations -->
+    <script>
+        // Animations initialization
+        new WOW().init();
+
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("menu-wrapper").style.top = "0";
+            } else {
+                document.getElementById("menu-wrapper").style.top = "-54px";
+            }
+        }
+    </script>
+</body>
+
+</html>
